@@ -1,0 +1,1 @@
+{"version":3,"file":"post-products.schema.js","sourceRoot":"","sources":["../../../../../src/domain/products/use-cases/post-product/post-products.schema.ts"],"names":[],"mappings":";;;AACA,qEAGyC;AAE5B,QAAA,0BAA0B,GAAG;IACxC,OAAO,EAAE,iBAAiB;IAC1B,IAAI,EAAE,CAAC,UAAU,CAAC;IAClB,QAAQ,EAAE,CAAC,EAAE,CAAC;IACd,IAAI,EAAE,2CAA0B;IAChC,QAAQ,EAAE;QACR,GAAG,EAAE,4CAA2B;KACjC;CACsB,CAAA"}

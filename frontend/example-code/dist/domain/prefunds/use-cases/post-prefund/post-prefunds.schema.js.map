@@ -1,0 +1,1 @@
+{"version":3,"file":"post-prefunds.schema.js","sourceRoot":"","sources":["../../../../../src/domain/prefunds/use-cases/post-prefund/post-prefunds.schema.ts"],"names":[],"mappings":";;;AACA,uEAG0C;AAC7B,QAAA,0BAA0B,GAAG;IACxC,OAAO,EAAE,iBAAiB;IAC1B,IAAI,EAAE,CAAC,UAAU,CAAC;IAClB,QAAQ,EAAE,CAAC,EAAE,CAAC;IACd,IAAI,EAAE,4CAA0B;IAChC,QAAQ,EAAE;QACR,GAAG,EAAE,6CAA2B;KACjC;CACsB,CAAA"}

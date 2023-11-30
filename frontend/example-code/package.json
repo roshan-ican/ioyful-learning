@@ -1,0 +1,64 @@
+{
+  "name": "starter-kit",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.ts",
+  "directories": {
+    "test": "test"
+  },
+  "_moduleAliases": {
+    "@": "./dist"
+  },
+  "scripts": {
+    "test": "npm run build:ts && tsc -p test/tsconfig.json && tap --ts \"test/**/*.test.ts\"",
+    "start": "npm run build:ts && fastify start -l info dist/app.js -p 4200",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js -p 4200",
+    "generate-types": "npx openapi-typescript ./generators/ts/open-api.json --output ./generators/ts/types.d.ts",
+    "generate": "npx plop --plopfile ./generators/plopfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.410.0",
+    "@fastify/autoload": "^5.7.1",
+    "@fastify/cors": "^8.3.0",
+    "@fastify/env": "^4.2.0",
+    "@fastify/multipart": "^7.7.3",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.3",
+    "@fastify/type-provider-typebox": "^3.4.0",
+    "@sinclair/typebox": "^0.30.4",
+    "csv-parser": "^3.0.0",
+    "fastify": "^4.21.0",
+    "fastify-cli": "^5.8.0",
+    "fastify-plugin": "^4.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.4.2",
+    "ramda": "^0.29.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.8",
+    "@types/ramda": "^0.29.3",
+    "@types/tap": "^15.0.8",
+    "@types/uuid": "^9.0.3",
+    "@typescript-eslint/eslint-plugin": "6.2.1",
+    "@typescript-eslint/parser": "6.2.1",
+    "concurrently": "^8.2.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "fastify-tsconfig": "^1.0.1",
+    "module-alias": "^2.2.3",
+    "openapi-typescript": "^6.5.0",
+    "plop": "^3.1.2",
+    "tap": "^16.3.8",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  }
+}
